@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* Latar belakang putih */
+    --foreground: 20 14.3% 4.1%; /* Teks hitam */
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 267 88% 21%; /* Warna Utama Anda (#3b0764) */
+    --primary-foreground: 0 0% 100%; /* Teks di atas warna utama: Putih */
+    --secondary: 266 96% 15%; /* Warna Kedua Anda (#2e0249) */
+    --secondary-foreground: 0 0% 100%; /* Teks di atas warna kedua: Putih */
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 45 96% 53%; /* Warna Aksen Kuning Anda (#facc15) */
+    /* --accent: 0 84% 60%; /* Warna aksen: Merah terang (#ef4444) */
+    --accent-foreground: 20 14.3% 4.1%; /* Teks di atas warna aksen: Hitam agar kontras */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 267 88% 21%; /* Samakan dengan warna utama */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 266 96% 15%;      /* Latar belakang: Warna Kedua Anda (#2e0249) */
+    --foreground: 0 0% 100%;         /* Teks utama: Putih (#FFFFFF) */
+    --card: 267 88% 21%;             /* Warna card: Warna Utama Anda (#3b0764) */
+    --card-foreground: 0 0% 100%;    /* Teks di card: Putih */
+    --popover: 267 88% 21%;          /* Warna popover: Warna Utama Anda */
+    --popover-foreground: 0 0% 100%; /* Teks di popover: Putih */
+    --primary: 0 0% 100%;            /* Warna utama di dark mode: Putih */
+    --primary-foreground: 267 88% 21%; /* Teks di atasnya: Warna ungu Anda agar kontras */
+    --secondary: 45 96% 53%;         /* Warna kedua di dark mode: Kuning Aksen Anda (#facc15) */
+    --secondary-foreground: 266 96% 15%; /* Teks di atasnya: Warna ungu tua agar kontras */
+    --muted: 267 88% 21%;
+    --muted-foreground: 0 0% 80%;      /* Teks muted: Abu-abu terang */
+    --accent: 45 96% 53%;            /* Warna aksen: Kuning Aksen Anda (#facc15) */
+    --accent-foreground: 266 96% 15%;  /* Teks di atas aksen: Ungu tua */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 267 88% 21%;           /* Warna border: Warna Utama Anda */
+    --input: 267 88% 21%;            /* Warna input field: Warna Utama Anda */
+    --ring: 45 96% 53%;              /* Warna ring focus: Kuning Aksen Anda */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
