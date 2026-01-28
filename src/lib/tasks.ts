@@ -24,7 +24,7 @@ export const TASKS = {
     id: "joinedDiscord",
     title: "Join Discord Server",
     description: "Join our community on Discord.",
-    link: "https://discord.gg/f2cE6tqy",
+    link: "https://discord.gg/zwwBd9Tf",
     check: () => Promise.resolve(true)
   }
 };

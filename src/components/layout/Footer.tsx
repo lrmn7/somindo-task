@@ -4,7 +4,7 @@ export default function Footer() {
       <p className="mb-2">
         Made with 💛 by{" "}
         <a
-          href="https://twitter.com/romanromannya"
+          href="https://lrmn.link"
           target="_blank"
           rel="noopener noreferrer"
           className="font-semibold hover:underline transition-colors"
